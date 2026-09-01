@@ -1,0 +1,364 @@
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+
+    --colour1: rgba(162, 12, 188, 0.45);
+    --colour2: rgba(14, 62, 187, 0.4);
+    --colour3: rgba(220, 40, 255, 0.25);
+
+    --dark1: #080014;
+    --dark2: #171044;
+    --dark3: #080b24;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            var(--colour1),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 30%,
+            var(--colour2),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 50% 85%,
+            var(--colour3),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            var(--dark1),
+            var(--dark2),
+            var(--dark3)
+        );
+
+    background-size: 200% 200%;
+
+    animation: backgroundMove 12s ease-in-out infinite;
+
+    transition: background 0.8s ease;
+}
+
+
+/* Background animation */
+
+@keyframes backgroundMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =========================
+   THEMES
+========================= */
+
+
+/* Purple */
+
+body.theme-purple {
+
+    --colour1: rgba(162, 12, 188, 0.45);
+    --colour2: rgba(14, 62, 187, 0.4);
+    --colour3: rgba(220, 40, 255, 0.25);
+
+    --dark1: #080014;
+    --dark2: #171044;
+    --dark3: #080b24;
+}
+
+
+/* Green / Cyan */
+
+body.theme-green {
+
+    --colour1: rgba(0, 255, 170, 0.4);
+    --colour2: rgba(0, 200, 255, 0.35);
+    --colour3: rgba(0, 255, 110, 0.25);
+
+    --dark1: #020617;
+    --dark2: #032d3a;
+    --dark3: #001b24;
+}
+
+
+/* Red / Orange */
+
+body.theme-red {
+
+    --colour1: rgba(255, 40, 40, 0.4);
+    --colour2: rgba(255, 120, 0, 0.35);
+    --colour3: rgba(255, 0, 100, 0.25);
+
+    --dark1: #120207;
+    --dark2: #3a1010;
+    --dark3: #18020c;
+}
+
+
+/* Gold / Orange */
+
+body.theme-gold {
+
+    --colour1: rgba(255, 210, 50, 0.4);
+    --colour2: rgba(255, 120, 0, 0.35);
+    --colour3: rgba(255, 170, 0, 0.25);
+
+    --dark1: #0f0a02;
+    --dark2: #3a2505;
+    --dark3: #1c1002;
+}
+
+
+/* =========================
+   THEME DROPDOWN
+========================= */
+
+.theme-dropdown {
+
+    position: fixed;
+
+    top: 25px;
+    right: 25px;
+
+    width: 145px;
+
+    z-index: 1000;
+}
+
+
+/* Main button */
+
+.theme-button {
+
+    width: 145px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 14px;
+
+    background: rgba(15, 15, 35, 0.6);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.12);
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.theme-button:hover {
+
+    background: rgba(35, 35, 65, 0.75);
+
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* Paint palette */
+
+.theme-icon {
+
+    font-size: 19px;
+
+    margin-right: 9px;
+
+    line-height: 1;
+}
+
+
+/* Arrow */
+
+.dropdown-arrow {
+
+    margin-left: auto;
+
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   DROPDOWN MENU
+========================= */
+
+.theme-menu {
+
+    width: 145px;
+
+    margin-top: 8px;
+
+    padding: 6px;
+
+    box-sizing: border-box;
+
+    background: rgba(15, 15, 35, 0.75);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+
+    animation: dropdownAppear 0.2s ease;
+}
+
+
+/* Dropdown opening animation */
+
+@keyframes dropdownAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Theme options */
+
+.theme-option {
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 11px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+
+.theme-option:hover {
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: white;
+}
+
+
+.theme-option.active {
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: white;
+}
+
+
+/* =========================
+   COLOUR DOTS
+========================= */
+
+.theme-dot {
+
+    width: 9px;
+    height: 9px;
+
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+
+.theme-dot.purple {
+
+    background: linear-gradient(
+        135deg,
+        #a855f7,
+        #22d3ee
+    );
+}
+
+
+.theme-dot.green {
+
+    background: linear-gradient(
+        135deg,
+        #00ffb3,
+        #00d9ff
+    );
+}
+
+
+.theme-dot.red {
+
+    background: linear-gradient(
+        135deg,
+        #ff3030,
+        #ff7a00
+    );
+}
+
+
+.theme-dot.gold {
+
+    background: linear-gradient(
+        135deg,
+        #ffe259,
+        #ff9f1c
+    );
+}

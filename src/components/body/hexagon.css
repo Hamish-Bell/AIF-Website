@@ -1,0 +1,41 @@
+/* Spinning Hexagon */
+.hexagon {
+    pointer-events: none;
+    width: 600px;
+    aspect-ratio: 1;
+    background: rgba(211, 211, 211, 0.094);
+
+    clip-path: polygon(
+        25% 6.7%,
+        75% 6.7%,
+        100% 50%,
+        75% 93.3%,
+        25% 93.3%,
+        0% 50%
+    );
+
+    position: fixed;
+    top: 48.5%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 0;
+
+    animation: spin 10s linear infinite;
+}
+
+.main {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
