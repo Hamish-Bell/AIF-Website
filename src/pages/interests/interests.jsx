@@ -29,7 +29,7 @@ function Interests() {
 
                 <div className='interest2'>
                     <div className='text-container'>
-                        <h1 className='title'>Cars</hh1>
+                        <h1 className='title'>Cars</h1>
                         <p className='info'>
                             Cars have always been an interest of mine, especially
                             Japanese performance cars. My favourite car is the Nissan
