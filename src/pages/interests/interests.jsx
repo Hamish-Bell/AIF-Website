@@ -1,4 +1,8 @@
 import './interests.css'
+import soccer from '../assets/soccer.png'
+import skyline from '../assets/skyline.png'
+import tech from '../assets/tech.jpg'
+import dog from '../assets/dog.jpg'
 
 function Interests() {
     return (
@@ -17,16 +21,15 @@ function Interests() {
                     </div>
 
                     <img
-                        src="src/assets/soccer.png"
+                        src={soccer}
                         alt="PHK Team photo"
                         className='team-photo'
                     />
                 </div>
 
-
                 <div className='interest2'>
                     <div className='text-container'>
-                        <h1 className='title'>Cars</h1>
+                        <h1 className='title'>Cars</hh1>
                         <p className='info'>
                             Cars have always been an interest of mine, especially
                             Japanese performance cars. My favourite car is the Nissan
@@ -36,12 +39,11 @@ function Interests() {
                     </div>
 
                     <img
-                        src="src/assets/skyline.png"
+                        src={skyline}
                         alt="Nissan Skyline R34"
                         className='car-photo'
                     />
                 </div>
-
 
                 <div className='interest3'>
                     <div className='text-container'>
@@ -53,9 +55,9 @@ function Interests() {
                     </div>
 
                     <img 
-                        src="src/assets/tech.jpg" 
-                        alt="tech-image" 
-                        className='tech-image' 
+                        src={tech}
+                        alt="tech-image"
+                        className='tech-image'
                     />
                 </div>
 
@@ -64,14 +66,13 @@ function Interests() {
                         <h1 className='title'>Pets</h1>
                         <p className='info'>
                             Pets have always been an important part of my life, especially my dog. I enjoy spending time with my dog and appreciate the companionship and happiness she brings.
-
                         </p>
                     </div>
 
                     <img 
-                        src="src/assets/dog.jpg" 
-                        alt="dog-image" 
-                        className='dog-image' 
+                        src={dog}
+                        alt="dog-image"
+                        className='dog-image'
                     />
                 </div>
 
