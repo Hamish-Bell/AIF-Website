@@ -1,8 +1,9 @@
 import './interests.css'
-import soccer from '../assets/soccer.png'
-import skyline from '../assets/skyline.png'
-import tech from '../assets/tech.jpg'
-import dog from '../assets/dog.jpg'
+import soccer from '../../assets/soccer.png'
+import skyline from '../../assets/skyline.png'
+import tech from '../../assets/tech.jpg'
+import dog from '../../assets/dog.jpg'
+
 
 function Interests() {
     return (
