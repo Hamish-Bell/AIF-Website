@@ -11,27 +11,22 @@ import Interests from './pages/interests/interests.jsx'
 
 function App() {
 
-    const [theme, setTheme] = useState(0)
+    const [theme, setTheme] = useState(7)
     const [dropdownOpen, setDropdownOpen] = useState(false)
 
     const themes = [
-        {
-            name: 'Purple',
-            className: 'theme-purple'
-        },
-        {
-            name: 'Green',
-            className: 'theme-green'
-        },
-        {
-            name: 'Red',
-            className: 'theme-red'
-        },
-        {
-            name: 'Gold',
-            className: 'theme-gold'
-        }
+        { name: 'Red', className: 'theme-red' },
+        { name: 'Orange', className: 'theme-orange' },
+        { name: 'Gold', className: 'theme-gold' },   // yellow/gold
+        { name: 'Lime', className: 'theme-lime' },
+        { name: 'Green', className: 'theme-green' },
+        { name: 'Cyan', className: 'theme-cyan' },
+        { name: 'Blue', className: 'theme-blue' },
+        { name: 'Purple', className: 'theme-purple' },
+        { name: 'Pink', className: 'theme-pink' },
+        { name: 'Silver', className: 'theme-silver' } // neutral at end
     ]
+
 
     useEffect(() => {
         document.body.className = themes[theme].className

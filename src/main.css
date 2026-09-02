@@ -4,8 +4,11 @@ body {
     margin: 0;
 }
 
-body {
+/* =========================
+   GLOBAL BACKGROUND
+========================= */
 
+body {
     --colour1: rgba(162, 12, 188, 0.45);
     --colour2: rgba(14, 62, 187, 0.4);
     --colour3: rgba(220, 40, 255, 0.25);
@@ -15,350 +18,252 @@ body {
     --dark3: #080b24;
 
     background:
-        radial-gradient(
-            circle at 20% 20%,
-            var(--colour1),
-            transparent 35%
-        ),
-
-        radial-gradient(
-            circle at 80% 30%,
-            var(--colour2),
-            transparent 35%
-        ),
-
-        radial-gradient(
-            circle at 50% 85%,
-            var(--colour3),
-            transparent 40%
-        ),
-
-        linear-gradient(
-            135deg,
-            var(--dark1),
-            var(--dark2),
-            var(--dark3)
-        );
+        radial-gradient(circle at 20% 20%, var(--colour1), transparent 35%),
+        radial-gradient(circle at 80% 30%, var(--colour2), transparent 35%),
+        radial-gradient(circle at 50% 85%, var(--colour3), transparent 40%),
+        linear-gradient(135deg, var(--dark1), var(--dark2), var(--dark3));
 
     background-size: 200% 200%;
-
     animation: backgroundMove 12s ease-in-out infinite;
-
     transition: background 0.8s ease;
 }
 
-
-/* Background animation */
-
 @keyframes backgroundMove {
-
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
-
 
 /* =========================
    THEMES
 ========================= */
 
-
-/* Purple */
-
+/* 🟣 Purple (accurate) */
 body.theme-purple {
+    --colour1: rgba(170, 80, 255, 0.45);
+    --colour2: rgba(120, 40, 255, 0.35);
+    --colour3: rgba(200, 120, 255, 0.25);
 
-    --colour1: rgba(162, 12, 188, 0.45);
-    --colour2: rgba(14, 62, 187, 0.4);
-    --colour3: rgba(220, 40, 255, 0.25);
-
-    --dark1: #080014;
-    --dark2: #171044;
-    --dark3: #080b24;
+    --dark1: #12002b;
+    --dark2: #2a0a4a;
+    --dark3: #1a0033;
 }
 
-
-/* Green / Cyan */
-
+/* 🟩 Green (accurate) */
 body.theme-green {
+    --colour1: rgba(0, 255, 90, 0.45);
+    --colour2: rgba(0, 200, 60, 0.35);
+    --colour3: rgba(120, 255, 150, 0.25);
 
-    --colour1: rgba(0, 255, 170, 0.4);
-    --colour2: rgba(0, 200, 255, 0.35);
-    --colour3: rgba(0, 255, 110, 0.25);
-
-    --dark1: #020617;
-    --dark2: #032d3a;
-    --dark3: #001b24;
+    --dark1: #001a0a;
+    --dark2: #003a1a;
+    --dark3: #002412;
 }
 
-
-/* Red / Orange */
-
+/* 🔴 Red (accurate) */
 body.theme-red {
+    --colour1: rgba(255, 60, 60, 0.45);
+    --colour2: rgba(200, 20, 20, 0.35);
+    --colour3: rgba(255, 120, 120, 0.25);
 
-    --colour1: rgba(255, 40, 40, 0.4);
-    --colour2: rgba(255, 120, 0, 0.35);
-    --colour3: rgba(255, 0, 100, 0.25);
-
-    --dark1: #120207;
-    --dark2: #3a1010;
-    --dark3: #18020c;
+    --dark1: #240000;
+    --dark2: #3a0000;
+    --dark3: #180000;
 }
 
-
-/* Gold / Orange */
-
+/* 🟨 Gold (accurate) */
 body.theme-gold {
+    --colour1: rgba(255, 215, 80, 0.45);
+    --colour2: rgba(255, 180, 40, 0.35);
+    --colour3: rgba(255, 235, 150, 0.25);
 
-    --colour1: rgba(255, 210, 50, 0.4);
-    --colour2: rgba(255, 120, 0, 0.35);
-    --colour3: rgba(255, 170, 0, 0.25);
-
-    --dark1: #0f0a02;
-    --dark2: #3a2505;
-    --dark3: #1c1002;
+    --dark1: #1a1200;
+    --dark2: #3a2a00;
+    --dark3: #241b00;
 }
 
+/* Blue */
+body.theme-blue {
+    --colour1: rgba(0, 120, 255, 0.45);
+    --colour2: rgba(0, 200, 255, 0.35);
+    --colour3: rgba(0, 150, 255, 0.25);
+
+    --dark1: #021024;
+    --dark2: #032a4a;
+    --dark3: #001a33;
+}
+
+/* Pink */
+body.theme-pink {
+    --colour1: rgba(255, 80, 160, 0.45);
+    --colour2: rgba(255, 40, 120, 0.35);
+    --colour3: rgba(255, 120, 200, 0.25);
+
+    --dark1: #1a0010;
+    --dark2: #33001f;
+    --dark3: #240014;
+}
+
+/* Cyan */
+body.theme-cyan {
+    --colour1: rgba(0, 255, 255, 0.45);
+    --colour2: rgba(0, 200, 255, 0.35);
+    --colour3: rgba(0, 150, 255, 0.25);
+
+    --dark1: #001014;
+    --dark2: #00303a;
+    --dark3: #001f24;
+}
+
+/* Orange */
+body.theme-orange {
+    --colour1: rgba(255, 140, 0, 0.45);
+    --colour2: rgba(255, 100, 0, 0.35);
+    --colour3: rgba(255, 170, 50, 0.25);
+
+    --dark1: #1a0a00;
+    --dark2: #3a1f00;
+    --dark3: #241200;
+}
+
+/* Lime */
+body.theme-lime {
+    --colour1: rgba(180, 255, 0, 0.45);
+    --colour2: rgba(120, 255, 0, 0.35);
+    --colour3: rgba(200, 255, 100, 0.25);
+
+    --dark1: #0a1400;
+    --dark2: #1f3a00;
+    --dark3: #122400;
+}
+
+/* Silver */
+body.theme-silver {
+    --colour1: rgba(200, 200, 200, 0.25);
+    --colour2: rgba(150, 150, 150, 0.2);
+    --colour3: rgba(255, 255, 255, 0.15);
+
+    --dark1: #050505;
+    --dark2: #101010;
+    --dark3: #1a1a1a;
+}
 
 /* =========================
    THEME DROPDOWN
 ========================= */
 
 .theme-dropdown {
-
     position: fixed;
-
     top: 25px;
     right: 25px;
-
     width: 145px;
-
     z-index: 1000;
 }
 
-
-/* Main button */
-
 .theme-button {
-
     width: 145px;
     height: 52px;
-
     display: flex;
     align-items: center;
-
     padding: 0 13px;
-
     border: 1px solid rgba(255, 255, 255, 0.25);
-
     border-radius: 14px;
-
     background: rgba(15, 15, 35, 0.6);
-
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-
     color: white;
-
     font-family: 'Montserrat', sans-serif;
-
     font-size: 14px;
     font-weight: 600;
-
     cursor: pointer;
-
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.25),
         inset 0 1px 1px rgba(255, 255, 255, 0.12);
-
-    transition:
-        background 0.25s ease,
-        border-color 0.25s ease;
+    transition: background 0.25s ease, border-color 0.25s ease;
 }
 
-
 .theme-button:hover {
-
     background: rgba(35, 35, 65, 0.75);
-
     border-color: rgba(255, 255, 255, 0.4);
 }
 
-
-/* Paint palette */
-
 .theme-icon {
-
     font-size: 19px;
-
     margin-right: 9px;
-
     line-height: 1;
 }
-
-
-/* Arrow */
 
 .dropdown-arrow {
-
     margin-left: auto;
-
     font-size: 18px;
-
     line-height: 1;
 }
 
-
-/* =========================
-   DROPDOWN MENU
-========================= */
+/* Dropdown menu */
 
 .theme-menu {
-
     width: 145px;
-
     margin-top: 8px;
-
     padding: 6px;
-
-    box-sizing: border-box;
-
     background: rgba(15, 15, 35, 0.75);
-
     border: 1px solid rgba(255, 255, 255, 0.2);
-
     border-radius: 14px;
-
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.35);
-
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
     animation: dropdownAppear 0.2s ease;
 }
 
-
-/* Dropdown opening animation */
-
 @keyframes dropdownAppear {
-
-    from {
-        opacity: 0;
-        transform: translateY(-8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-
-/* Theme options */
-
 .theme-option {
-
     width: 100%;
-
     display: flex;
     align-items: center;
-
     padding: 10px 11px;
-
     border: none;
-
     border-radius: 9px;
-
     background: transparent;
-
     color: rgba(255, 255, 255, 0.8);
-
     font-family: 'Montserrat', sans-serif;
-
     font-size: 13px;
-
     cursor: pointer;
-
     transition: background 0.2s ease;
 }
 
-
 .theme-option:hover {
-
     background: rgba(255, 255, 255, 0.1);
-
     color: white;
 }
-
 
 .theme-option.active {
-
     background: rgba(255, 255, 255, 0.12);
-
     color: white;
 }
-
 
 /* =========================
    COLOUR DOTS
 ========================= */
 
 .theme-dot {
-
     width: 9px;
     height: 9px;
-
     margin-right: 10px;
-
     border-radius: 50%;
-
     flex-shrink: 0;
 }
 
-
-.theme-dot.purple {
-
-    background: linear-gradient(
-        135deg,
-        #a855f7,
-        #22d3ee
-    );
-}
-
-
-.theme-dot.green {
-
-    background: linear-gradient(
-        135deg,
-        #00ffb3,
-        #00d9ff
-    );
-}
-
-
-.theme-dot.red {
-
-    background: linear-gradient(
-        135deg,
-        #ff3030,
-        #ff7a00
-    );
-}
-
-
-.theme-dot.gold {
-
-    background: linear-gradient(
-        135deg,
-        #ffe259,
-        #ff9f1c
-    );
-}
+/* Updated dots to match accurate colours */
+.theme-dot.purple { background: linear-gradient(135deg, #a855f7, #7c3aed); }
+.theme-dot.green { background: linear-gradient(135deg, #4ade80, #22c55e); }
+.theme-dot.red { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.theme-dot.gold { background: linear-gradient(135deg, #facc15, #eab308); }
+.theme-dot.blue { background: linear-gradient(135deg, #3b82f6, #06b6d4); }
+.theme-dot.pink { background: linear-gradient(135deg, #ff4da6, #ff80c8); }
+.theme-dot.cyan { background: linear-gradient(135deg, #22d3ee, #0ea5e9); }
+.theme-dot.orange { background: linear-gradient(135deg, #ff8c00, #ffb347); }
+.theme-dot.lime { background: linear-gradient(135deg, #a3e635, #4ade80); }
+.theme-dot.silver { background: linear-gradient(135deg, #d1d5db, #9ca3af); }
