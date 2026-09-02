@@ -2,10 +2,19 @@ import './awards.css'
 
 function Awards() {
     return (
+            
+        
         <main className="awards-bg">
+
+
             <div className='card'>
                 <h2 className='card-title'>Academic Endeavour (2022 - 2x)</h2>
                 <p className='card-text'>Achieved through persistent effort into academics.</p>
+            </div>
+
+            <div className='card'>
+                <h2 className='card-title'>Bronze Award (2023)</h2>
+                <p className='card-text'>Achieved by answering 2,524 questions in an Education Perfect Championship.</p>
             </div>
 
             <div className='card'>
@@ -41,11 +50,6 @@ function Awards() {
             <div className='card'>
                 <h2 className='card-title'>Academic Endeavour (2026 - 1x)</h2>
                 <p className='card-text'>Achieved through persistent effort into academics.</p>
-            </div>
-
-            <div className='card'>
-                <h2 className='card-title'>Bronze Award (2023)</h2>
-                <p className='card-text'>Achieved by answering 2,524 questions in an Education Perfect Championship.</p>
             </div>
 
             <div className='card'>

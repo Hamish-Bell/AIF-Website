@@ -25,6 +25,7 @@ function Interests() {
                         src={soccer}
                         alt="PHK Team photo"
                         className='team-photo'
+                        draggable="false"
                     />
                 </div>
 
@@ -43,6 +44,7 @@ function Interests() {
                         src={skyline}
                         alt="Nissan Skyline R34"
                         className='car-photo'
+                        draggable="false"
                     />
                 </div>
 
@@ -59,6 +61,7 @@ function Interests() {
                         src={tech}
                         alt="tech-image"
                         className='tech-image'
+                        draggable="false"
                     />
                 </div>
 
@@ -74,6 +77,7 @@ function Interests() {
                         src={dog}
                         alt="dog-image"
                         className='dog-image'
+                        draggable="false"
                     />
                 </div>
 
