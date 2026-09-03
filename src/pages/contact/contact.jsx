@@ -12,6 +12,8 @@ function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        console.log("FORM SUBMITTED");  // 🔥 ADDED THIS
+
         try {
             const response = await fetch("https://aif-backend-production.up.railway.app/send", {
                 method: "POST",
