@@ -10,7 +10,7 @@ html, body {
     transform: translateX(-50%);
     
     max-width: 20%;
-    min-width: 475px;
+    min-width: 510px;
     height: 75px;
     display: flex;
     justify-content: center;

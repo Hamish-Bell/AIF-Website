@@ -8,6 +8,7 @@ import Hexagon from './components/body/hexagon.jsx'
 import Home from './pages/home/home.jsx'
 import Awards from './pages/awards/awards.jsx'
 import Interests from './pages/interests/interests.jsx'
+import Contact from './pages/contact/contact.jsx'
 
 function App() {
 
@@ -83,7 +84,8 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/awards" element={<Awards />} />
                 <Route path="/interests" element={<Interests />} />
-                <Route path="/skills" element={<Home />} />
+                <Route path = '/contact' element={<Contact />} />
+                
             </Routes>
 
             <Footer />
