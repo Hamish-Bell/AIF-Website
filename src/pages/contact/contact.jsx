@@ -16,7 +16,7 @@ function Contact() {
 
         try {
             const response = await fetch(
-                "https://aif-backend-production.up.railway.app/send",
+                "https://aif-backend-r51u.onrender.com/send",
                 {
                     method: "POST",
                     headers: {
