@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './contact.css';
+
+const SERVICE_ID = "service_nacjwqo";
+const TEMPLATE_ID = "template_2xusxos";
+const PUBLIC_KEY = "cpQg0UfwQjI4pmhii";
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -15,43 +20,30 @@ function Contact() {
         console.log("Sending:", formData);
 
         try {
-            const response = await fetch(
-                "https://aif-backend-r51u.onrender.com/send",
+            const result = await emailjs.send(
+                SERVICE_ID,
+                TEMPLATE_ID,
                 {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        name: formData.name,
-                        email: formData.email,
-                        message: formData.message
-                    })
-                }
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message
+                },
+                PUBLIC_KEY
             );
 
-            const data = await response.json();
+            console.log("EmailJS response:", result);
 
-            console.log("Server response:", data);
+            setFormData({
+                name: "",
+                email: "",
+                message: ""
+            });
 
-            if (response.ok && data.success) {
-                console.log("Email sent successfully!");
-
-                setFormData({
-                    name: "",
-                    email: "",
-                    message: ""
-                });
-
-                alert("Message sent successfully!");
-            } else {
-                console.error("Email send error:", data.error);
-                alert("Failed to send message: " + (data.error || "Unknown error"));
-            }
+            alert("Message sent successfully!");
 
         } catch (error) {
-            console.error("Request error:", error);
-            alert("Could not connect to the email server.");
+            console.error("EmailJS error:", error);
+            alert("Failed to send message: " + (error?.text || "Unknown error"));
         }
     };
 
