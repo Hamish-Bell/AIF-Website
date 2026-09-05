@@ -2,6 +2,13 @@ html, body {
     padding: 0;
     margin: 0;
     min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* optional: prevents weird scrollbars */
+    overflow-x: hidden;
 }
 
 .contact-bg,
@@ -11,16 +18,18 @@ html, body {
 
 .contact-bg {
     width: 70vw;
-    height: 55vh;
+    max-width: 900px;
+
     padding: 25px;
     border-radius: 20px;
 
-    margin: 150px auto 40px auto;
+    /* remove margins so flexbox can center it */
+    margin: 0;
+    margin-bottom: 50px;
 
     position: relative;
 
     background: rgba(255, 255, 255, 0.12);
-
     border: 1px solid rgba(255, 255, 255, 0.18);
 
     backdrop-filter: blur(15px) saturate(150%);
@@ -42,15 +51,13 @@ html, body {
     font-size: 48px;
     font-weight: bold;
     text-shadow:
-        0 0 6px rgba(255, 255, 255, 0.26),   /* soft glow */
-        0 2px 8px rgba(0, 0, 0, 0.35);       /* depth shadow */
+        0 0 6px rgba(255, 255, 255, 0.26),
+        0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .contact-bg form {
-    position: absolute;
-    top: 100px;
-    left: 25px;
-    right: 25px;
+    position: relative;
+    margin-top: 60px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -60,14 +67,12 @@ html, body {
 .contact-bg input,
 .contact-bg textarea {
     width: 100%;
-
     background: transparent;
 
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 6px;
 
     color: white;
-
     padding: 12px;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -120,4 +125,17 @@ html, body {
 .contact-bg button:hover {
     background: white;
     transform: translateY(-1px);
+}
+
+/* Large screen tweaks */
+@media (min-width: 1600px) {
+    .contact-bg {
+        width: 50vw;
+        max-width: 850px;
+    }
+
+    .contact-bg .label {
+        font-size: 56px;
+        top: -75px;
+    }
 }
